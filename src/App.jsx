@@ -36,10 +36,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-container" style={{ padding: '40px', fontFamily: 'Arial, sans-serif' }}>
-        <h1>Parent Component (Class-Based)</h1>
+      <div className="app-container" style={{ padding: '40px', fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
+        <h1>Happy Dog or Sad Dog</h1>
 
-        <div className="children-container" style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
+        <div className="children-container" style={{ display: 'flex', gap: '20px', marginTop: '20px', justifyContent: 'center' }}>
           {this.state.characters.slice(0, 1).map((char) => (
             <ChildComponent
               key={char.id}
@@ -48,7 +48,7 @@ class App extends Component {
               image={char.image}
               status={char.status}
               onAction={this.handleUpdate}
-              
+
             />
           ))}
         </div>
